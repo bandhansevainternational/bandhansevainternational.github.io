@@ -760,54 +760,49 @@
             }
         };
 
-    function setLanguage(lang) {
-    // Translate element text content
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        if (translations[lang] && translations[lang][key]) {
-            el.textContent = translations[lang][key];
-        }
-    });
-
-    // Translate input placeholders
-    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-        const key = el.getAttribute('data-i18n-placeholder');
-        if (translations[lang] && translations[lang][key]) {
-            el.placeholder = translations[lang][key];
-        }
-    });
-
-    // Translate navigation items
-    document.querySelectorAll('nav.main-nav a').forEach(el => {
-        const newText = el.getAttribute(`data-${lang}`);
-        if (newText) el.textContent = newText;
-    });
-}
-
-// Language switch button click listener
-document.querySelectorAll('.lang-btn').forEach(btn => {
-  btn.addEventListener('click', (e) => {
-    const targetBtn = e.target.closest('.lang-btn');
-    if (!targetBtn) return;
-
-    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
-    targetBtn.classList.add('active');
-
-    const lang = targetBtn.getAttribute('data-lang') || targetBtn.textContent.trim().toLowerCase().slice(0, 2);
-    setLanguage(lang);
+  function setLanguage(lang) {
+  // Translate element text content
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (translations[lang] && translations[lang][key]) {
+      el.textContent = translations[lang][key];
+    }
   });
-});
 
+  // Translate input placeholders
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    if (translations[lang] && translations[lang][key]) {
+      el.placeholder = translations[lang][key];
+    }
+  });
+}
+  
 
+  // Language switch button click listener
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const targetBtn = e.target.closest('.lang-btn');
+      if (!targetBtn) return;
+
+      document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+      targetBtn.classList.add('active');
+
+      const lang = targetBtn.getAttribute('data-lang') || targetBtn.textContent.trim().toLowerCase().slice(0, 2);
+      setLanguage(lang);
+    });
+  });
+
+        
 function selectHospitalAndScroll(hospitalValue) {
-    var selectElem = document.getElementById('preferred-hospital');
-    if (selectElem) {
-        selectElem.value = hospitalValue;
-    }
-    var formSection = document.getElementById('contact-form');
-    if (formSection) {
-        formSection.scrollIntoView({ behavior: 'smooth' });
-    }
+  const selectElem = document.getElementById('hosp_select') || document.getElementById('preferred-hospital') || document.querySelector('select');
+  if (selectElem) {
+    selectElem.value = hospitalValue;
+  }
+  const formSection = document.getElementById('assistance-form') || document.getElementById('contact-form') || document.querySelector('form');
+  if (formSection) {
+    formSection.scrollIntoView({ behavior: 'smooth' });
+  }
 }
 
         const hospitalData = {
