@@ -697,10 +697,10 @@
     <script>
         const translations = {
             en: {
-                hero_title: "Your Trusted Bridge to Healthcare in India",
                     nav_home: "Home",
             nav_destinations: "Destinations",
                 nav_services: "Services",
+                hero_title: "Your Trusted Bridge to Healthcare in India",
                 hero_subtitle: "Complete Medical Tourism & Visa Assistance from Bangladesh to Kolkata",
                 bengali_banner: "আমরা অত্যন্ত বিশ্বস্ততার সাথে ভারতের যেকোনো নামী হাসপাতালে চিকিৎসার জন্য মেডিকেল ট্যুরিজম গাইডেন্স এবং দ্রুত ভিসা প্রসেসিং অ্যাসিস্ট্যান্স প্রদান করে থাকি।",
                 dest_title: "Medical Care Destinations",
@@ -731,10 +731,10 @@
                 submit_btn: "Submit Assistance Request"
             },
             bn: {
-                hero_title: "ভারতে স্বাস্থ্যসেবার জন্য আপনার বিশ্বস্ত সেতু",
                   nav_home: "হোম",
           nav_destinations: "গন্তব্য",
               nav_services: "সেবাসমূহ",
+                hero_title: "ভারতে স্বাস্থ্যসেবার জন্য আপনার বিশ্বস্ত সেতু",
                 hero_subtitle: "বাংলাদেশ থেকে কলকাতা পর্যন্ত সম্পূর্ণ মেডিকেল ট্যুরিজম এবং ভিসা সহায়তা",
                 bengali_banner: "আমরা অত্যন্ত বিশ্বস্ততার সাথে ভারতের যেকোনো নামী হাসপাতালে চিকিৎসার জন্য মেডিকেল ট্যুরিজম গাইডেন্স এবং দ্রুত ভিসা প্রসেসিং অ্যাসিস্ট্যান্স প্রদান করে থাকি।",
                 dest_title: "মেডিকেল কেয়ার ডেস্টিনেশন",
@@ -750,7 +750,7 @@
                 mumbai_title: "মুম্বাই এবং নতুন দিল্লি",
                 mumbai_desc: "শীর্ষস্থানীয় চিকিৎসা প্রতিষ্ঠান এবং বিশ্বব্যাপী স্বীকৃত সার্জারি।",
                 meghalaya_title: "মেঘালয়",
-                meghalaya_desc: "পূর্বাঞ্চলীয় অঞ্চলে রোগীদের চিকিৎসার জন্য নিবেদিত সমন্বয় সেবা।"
+                meghalaya_desc: "পূর্বাঞ্চলীয় অঞ্চলে রোগীদের চিকিৎসার জন্য নিবেদিত সমন্বয় সেবা।",
                 select_hosp_btn: "হাসপাতাল/আইভিএফ নির্বাচন করুন",
                 form_title: "চিকিৎসা সহায়তার অনুরোধ",
                 form_desc: "চিকিৎসা সেবা, ভিসা বা হাসপাতালের অ্যাপয়েন্টমেন্ট সংক্রান্ত সহায়তার জন্য নিচের ফরমটি পূরণ করুন",
@@ -892,10 +892,14 @@ function openHospitalModal(region) {
 }
 
 
-        function closeHospitalModal() {
-            const modal = document.getElementById('hospitalModal');
-            if (modal) modal.classList.remove('active');
-        }
+function closeHospitalModal() {
+    const modal = document.getElementById('hospitalModal') || document.getElementById('hospital-modal');
+    if (modal) {
+        modal.classList.remove('active');
+        modal.style.display = 'none';
+    }
+}
+     
     </script>
 
     <script src="//code.tidio.co/4fgcxemcdz0cofj2lo8hl6wvpwldqd2h.js" async></script>
