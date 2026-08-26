@@ -544,23 +544,23 @@
             <p class="services-subtitle">আমাদের সেবাসমূহ কাস্টমাইজযোগ্য (Customizable Services)</p>
 
             <div class="services-grid">
-                <div class="service-card">
-                    <h4>Medical Visa Assistance & Processing</h4>
-                    <p class="bn">বাংলাদেশি রোগীদের জন্য দ্রুত ও সহজ মেডিকেল ভিসা প্রসেসিং সহায়তা। (Fast and efficient processing)</p>
-                </div>
-                <div class="service-card">
-                    <h4>Doctor Appointment & Hospital Selection</h4>
-                    <p class="bn">আপনার প্রয়োজন অনুযায়ী সঠিক ডাক্তার ও হাসপাতাল নির্বাচন। (Selecting the best doctors and hospitals)</p>
-                </div>
-                <div class="service-card">
-                    <h4>Premium Accommodation Support</h4>
-                    <p class="bn">ভ্রমণ ও সম্পূর্ণ আবাসন সহায়তা - হোটেল, গেস্ট হাউস এবং ডরমিটরি। (Hotels, guesthouses and dormitories)</p>
-                </div>
-                <div class="service-card">
-                    <h4>Local Guide & Logistic Support</h4>
-                    <p class="bn">স্থানীয় গাইড, ভাষা সহায়তা, এয়ারপোর্ট পিক-আপ এবং ডক্টর অ্যাপয়েন্টমেন্ট সাপোর্ট। (Airport pickup and comprehensive support)</p>
-                </div>
-            </div>
+    <div class="service-card" onclick="selectService('Medical Visa Assistance & Processing')">
+        <h4>Medical Visa Assistance & Processing</h4>
+        <p class="bn">বাংলাদেশী রোগীদের জন্য দ্রুত ও সহজ মেডিকেল ভিসা প্রসেসিং সহায়তা। (Fast and efficient medical visa processing assistance.)</p>
+    </div>
+    <div class="service-card" onclick="selectService('Doctor Appointment & Hospital Selection')">
+        <h4>Doctor Appointment & Hospital Selection</h4>
+        <p class="bn">আপনার প্রয়োজন অনুযায়ী সঠিক ডাক্তার ও হাসপাতাল নির্বাচন। (Selecting the best doctor and hospital for your needs.)</p>
+    </div>
+    <div class="service-card" onclick="selectService('Premium Accommodation Support')">
+        <h4>Premium Accommodation Support</h4>
+        <p class="bn">ভ্রমণ ও সম্পূর্ণ আবাসন সহায়তা - হোটেল, গেস্ট হাউস এবং ডরমেটরি। (Hotels, guest houses, and dormitory assistance.)</p>
+    </div>
+    <div class="service-card" onclick="selectService('Local Guide & Logistic Support')">
+        <h4>Local Guide & Logistic Support</h4>
+        <p class="bn">স্থানীয় গাইড, ভাষা সহায়তা, এয়ারপোর্ট পিক-আপ এবং ডক্টর অ্যাপয়েন্টমেন্ট সাপোর্ট। (Local guide, language support, airport pickup, and doctor appointment support.)</p>
+    </div>
+</div>
         </section>
 
         <!-- Patient Service Request Form -->
@@ -585,6 +585,17 @@
                     <label for="email" data-i18n="email_label">Email Address *</label>
                     <input type="email" id="email" name="email" placeholder="example@mail.com" required>
                 </div>
+
+                <div class="form-group">
+    <label for="service-select">Preferred Service / Specialty</label>
+    <select id="service-select" name="service" class="form-control">
+        <option value="">Select a Service or Specialty</option>
+        <option value="Medical Visa Assistance & Processing">Medical Visa Assistance & Processing</option>
+        <option value="Doctor Appointment & Hospital Selection">Doctor Appointment & Hospital Selection</option>
+        <option value="Premium Accommodation Support">Premium Accommodation Support</option>
+        <option value="Local Guide & Logistic Support">Local Guide & Logistic Support</option>
+    </select>
+</div>
 
                 <div class="form-group">
                     <label for="preferred-hospital" data-i18n="hosp_label">Preferred Hospital / IVF Center & Destination</label>
@@ -656,6 +667,11 @@
                     <input type="file" id="document" name="attachment" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png">
                     <small data-i18n="file_hint">Upload prescriptions, reports, or passport copy (PDF, DOC, JPG, PNG)</small>
                 </div>
+
+                <div class="form-group">
+    <label for="user-message">Message / Additional Details (Optional)</label>
+    <textarea id="user-message" name="message" rows="4" placeholder="Write any specific details, medical history, or questions for us..." class="form-control"></textarea>
+</div>
 
                 <button type="submit" class="submit-btn" data-i18n="submit_btn">Submit Assistance Request</button>
             </form>
@@ -901,7 +917,15 @@ function closeHospitalModal() {
         modal.style.display = 'none';
     }
 }
-     
+function selectService(serviceName) {
+    console.log("Selected service:", serviceName);
+    
+    // Smooth scroll to the form section
+    const formSection = document.getElementById('assistance-form') || document.getElementById('contact-form');
+    if (formSection) {
+        formSection.scrollIntoView({ behavior: 'smooth' });
+    }
+}     
     </script>
 
     <script src="//code.tidio.co/4fgcxemcdz0cofj2lo8hl6wvpwldqd2h.js" async></script>
