@@ -919,18 +919,18 @@ function closeHospitalModal() {
 }
 function selectService(serviceName) {
     console.log("Selected service:", serviceName);
-    
-    // Look for the service dropdown or input field in your form
-    const serviceInput = document.getElementById('service_select') || document.getElementById('preferred-service') || document.getElementById('service');
+
+    // Look for the service dropdown in your form
+    const serviceInput = document.getElementById('service-select');
     
     if (serviceInput) {
         serviceInput.value = serviceName;
-        // Trigger a change event in case your form uses listeners
+        // Trigger a change event so the form registers the selection
         serviceInput.dispatchEvent(new Event('change'));
     }
-    
+
     // Smooth scroll to the form section
-    const formSection = document.getElementById('assistance-form') || document.getElementById('contact-form');
+    const formSection = document.getElementById('contact-form');
     if (formSection) {
         formSection.scrollIntoView({ behavior: 'smooth' });
     }
