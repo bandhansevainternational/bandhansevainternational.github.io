@@ -2996,32 +2996,39 @@
           </div>
 
 
-          <!-- Documents -->
+            <!-- Documents -->
 
-          <div class="form-group">
+<div class="form-group">
+  <label
+    for="document"
+    data-i18n="file_label"
+  >
+    Attach Medical Records / Documents (Optional)
+  </label>
 
-            <label
-              for="document"
-              data-i18n="file_label"
-            >
-              Attach Medical Records / Documents (Optional)
-            </label>
+  <input
+    type="file"
+    id="document"
+    name="attachment"
+    accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
+    multiple
+  >
 
-            <input
-              type="file"
-              id="document"
-              name="attachment"
-              accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
-            >
+  <small class="file-hint">
+    Select multiple files — PDF, DOC, DOCX, JPG or PNG. Maximum total size: 10 MB.
+  </small>
 
-            <small
-              class="file-hint"
-              data-i18n="file_hint"
-            >
-              Upload prescriptions, reports, or passport copy (PDF, DOC, JPG, PNG)
-            </small>
+  <div
+    id="selectedFiles"
+    class="selected-files"
+  ></div>
 
-          </div>
+  <small
+    id="fileSizeMessage"
+    class="file-size-message"
+  ></small>
+
+</div>
 
 
           <!-- Message -->
