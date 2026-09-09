@@ -971,7 +971,7 @@
 
 
     /* =========================================================
-       CONTACT FORM (TALLY EMBED WRAPPER)
+       CONTACT FORM
     ========================================================= */
 
     .form-section {
@@ -1012,6 +1012,162 @@
 
     .form-header p {
       color: var(--muted);
+    }
+
+    .form-group {
+      margin-bottom: 19px;
+    }
+
+    .form-group label {
+      display: block;
+
+      font-weight: 700;
+
+      margin-bottom: 7px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+
+      padding: 13px 15px;
+
+      border: 1px solid var(--border);
+
+      border-radius: 12px;
+
+      background: #fff;
+
+      color: var(--text);
+
+      outline: none;
+
+      transition:
+        border-color 0.2s,
+        box-shadow 0.2s;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+
+      min-height: 125px;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--primary-light);
+
+      box-shadow:
+        0 0 0 4px rgba(18, 114, 154, 0.1);
+    }
+
+    .form-group select {
+      appearance: none;
+      -webkit-appearance: none;
+
+      background-image:
+        url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath fill='%23526174' d='M5.5 7.5 10 12l4.5-4.5 1.5 1.5-6 6-6-6z'/%3E%3C/svg%3E");
+
+      background-repeat: no-repeat;
+
+      background-position: right 14px center;
+
+      padding-right: 45px;
+    }
+
+    .file-hint {
+      display: block;
+
+      margin-top: 7px;
+
+      color: var(--muted);
+
+      font-size: 0.82rem;
+    }
+
+    .file-size-message {
+      display: block;
+      margin-top: 6px;
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
+
+    .file-size-message.error {
+      color: #d9534f;
+    }
+
+    .file-size-message.success {
+      color: var(--green);
+    }
+
+    .selected-files {
+      margin-top: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .selected-file {
+      display: flex;
+      justify-content: space-between;
+      background: var(--surface-soft);
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      border: 1px solid var(--border);
+    }
+
+    .selected-file-name {
+      color: var(--text);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      max-width: 70%;
+    }
+
+    .selected-file-size {
+      color: var(--muted);
+    }
+
+    .submit-btn {
+      width: 100%;
+
+      border: 0;
+
+      border-radius: 12px;
+
+      padding: 14px 18px;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--primary),
+          #16a566
+        );
+
+      color: #fff;
+
+      font-weight: 800;
+
+      font-size: 1rem;
+
+      box-shadow: 0 8px 22px rgba(11, 79, 108, 0.15);
+
+      transition:
+        transform 0.25s,
+        box-shadow 0.25s;
+    }
+
+    .submit-btn:hover {
+      transform: translateY(-2px);
+
+      box-shadow: 0 12px 28px rgba(11, 79, 108, 0.2);
+    }
+
+    .submit-btn:active {
+      transform: translateY(0);
     }
 
 
@@ -2513,7 +2669,7 @@
 
 
     <!-- =====================================================
-         ASSISTANCE FORM (TALLY EMBED)
+         ASSISTANCE FORM
     ====================================================== -->
 
     <section
@@ -2535,9 +2691,412 @@
 
         </div>
 
-        <!-- Tally Embed Code Integration -->
-        <iframe src="https://tally.so/embed/3yV52x?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" width="100%" height="400" frameborder="0" marginheight="0" marginwidth="0" title="Request Medical Assistance"></iframe>
-        <script>window.Tally||(window.Tally={load:function(e,t,n){var s=document.createElement("script");s.src=e,s.onload=function(){window.Tally.embeds(t)},s.onerror=function(){var e=document.querySelector("iframe[src*='"+e+"']");e&&(e.src=t)},document.body.appendChild(s)}});Tally.load("https://tally.so/widgets/embed.js",{});</script>
+
+ <form id="assistanceForm" action="https://formsubmit.co/bandhansevainternational@gmail.com" method="POST" enctype="multipart/form-data" target="_blank">
+    <input type="hidden" name="_subject" value="New Medical Assistance Request - Bandhan Seva International">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_url" value="https://bandhansevainternational.github.io/">
+    <input type="hidden" name="access_key" value="sf_6d0c078bef52859139b89195952d6d25">
+
+
+          <!-- Name -->
+
+          <div class="form-group">
+
+            <label
+              for="name"
+              data-i18n="name_label"
+            >
+              Full Name *
+            </label>
+
+            <input
+              type="text"
+              id="name"
+              name="name"
+              data-i18n-placeholder="name_placeholder"
+              placeholder="Enter your full name"
+              required
+            >
+
+          </div>
+
+
+          <!-- Phone -->
+
+          <div class="form-group">
+
+            <label
+              for="phone"
+              data-i18n="phone_label"
+            >
+              Phone / WhatsApp Number *
+            </label>
+
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="+880 1XXX-XXXXXX"
+              required
+            >
+
+          </div>
+
+
+          <!-- Email -->
+
+          <div class="form-group">
+
+            <label
+              for="email"
+              data-i18n="email_label"
+            >
+              Email Address *
+            </label>
+
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="example@mail.com"
+              required
+            >
+
+          </div>
+
+
+          <!-- Service -->
+
+          <div class="form-group">
+
+            <label
+              for="service-select"
+              data-i18n="service_label"
+            >
+              Preferred Service / Specialty
+            </label>
+
+            <select
+              id="service-select"
+              name="service"
+            >
+
+              <option
+                value=""
+                data-i18n="service_default"
+              >
+                Select a Service or Specialty
+              </option>
+
+              <option
+                value="Medical Visa Assistance & Processing"
+                data-i18n="service_visa_title"
+              >
+                Medical Visa Assistance &amp; Processing
+              </option>
+
+              <option
+                value="Doctor Appointment & Hospital Selection"
+                data-i18n="service_doctor_title"
+              >
+                Doctor Appointment &amp; Hospital Selection
+              </option>
+
+              <option
+                value="Premium Accommodation Support"
+                data-i18n="service_stay_title"
+              >
+                Premium Accommodation Support
+              </option>
+
+              <option
+                value="Local Guide & Logistic Support"
+                data-i18n="service_logistic_title"
+              >
+                Local Guide &amp; Logistic Support
+              </option>
+
+            </select>
+
+          </div>
+
+
+          <!-- Hospital -->
+
+          <div class="form-group">
+
+            <label
+              for="preferred-hospital"
+              data-i18n="hosp_label"
+            >
+              Preferred Hospital / IVF Center &amp; Destination
+            </label>
+
+            <select
+              id="preferred-hospital"
+              name="hospital"
+            >
+
+              <option
+                value=""
+                data-i18n="hosp_default"
+              >
+                -- Select Preferred Hospital / IVF Center --
+              </option>
+
+
+              <!-- KOLKATA -->
+
+              <optgroup label="Kolkata">
+
+                <option value="Apollo Multispecialty, Kolkata">
+                  Apollo Multispecialty Hospital (Kolkata)
+                </option>
+
+                <option value="Fortis Hospital, Kolkata">
+                  Fortis Hospital (Anandapur, Kolkata)
+                </option>
+
+                <option value="Medica Superspecialty, Kolkata">
+                  Medica Superspecialty Hospital (Kolkata)
+                </option>
+
+                <option value="BM Birla Heart, Kolkata">
+                  BM Birla Heart Research Centre (Kolkata)
+                </option>
+
+                <option value="Nova IVF Fertility, Kolkata">
+                  Nova IVF Fertility (Park Circus, Kolkata)
+                </option>
+
+                <option value="Indira IVF, Kolkata">
+                  Indira IVF Center (Park Street, Kolkata)
+                </option>
+
+              </optgroup>
+
+
+              <!-- CHENNAI -->
+
+              <optgroup label="Chennai">
+
+                <option value="Apollo Hospitals Greams Road, Chennai">
+                  Apollo Hospitals (Greams Road, Chennai)
+                </option>
+
+                <option value="Apollo Proton Cancer Centre, Chennai">
+                  Apollo Proton Cancer Centre (Chennai)
+                </option>
+
+                <option value="MGM Healthcare, Chennai">
+                  MGM Healthcare (Chennai)
+                </option>
+
+                <option value="Gleneagles Global, Chennai">
+                  Gleneagles Global Health City (Chennai)
+                </option>
+
+                <option value="Rela Hospital, Chennai">
+                  Rela Hospital &amp; Institute (Chennai)
+                </option>
+
+                <option value="MIOT International, Chennai">
+                  MIOT International (Chennai)
+                </option>
+
+                <option value="Apollo Fertility, Chennai">
+                  Apollo Fertility Center (Chennai)
+                </option>
+
+                <option value="ART Fertility Clinics, Chennai">
+                  ART Fertility Clinic (Chennai)
+                </option>
+
+              </optgroup>
+
+
+              <!-- BENGALURU -->
+
+              <optgroup label="Bengaluru">
+
+                <option value="Superhealth Hospitals, Bengaluru">
+                  Superhealth Hospitals (Bengaluru)
+                </option>
+
+                <option value="Narayana Health, Bengaluru">
+                  Narayana Health City (Bengaluru)
+                </option>
+
+                <option value="Manipal Hospital, Bengaluru">
+                  Manipal Hospital (Old Airport Road, Bengaluru)
+                </option>
+
+                <option value="Aster CMI, Bengaluru">
+                  Aster CMI Hospital (Bengaluru)
+                </option>
+
+                <option value="Cloudnine Fertility, Bengaluru">
+                  Cloudnine Fertility Hospital (Bengaluru)
+                </option>
+
+                <option value="Nova IVF Fertility, Bengaluru">
+                  Nova IVF Fertility (Bengaluru)
+                </option>
+
+              </optgroup>
+
+
+              <!-- KERALA -->
+
+              <optgroup label="Kerala">
+
+                <option value="Amrita Hospital, Kochi">
+                  Amrita Hospital (Kochi)
+                </option>
+
+                <option value="VPS Lakeshore, Kochi">
+                  VPS Lakeshore Hospital (Kochi)
+                </option>
+
+                <option value="Aster Medcity, Kochi">
+                  Aster Medcity (Kochi)
+                </option>
+
+                <option value="KIMS HEALTH, Trivandrum">
+                  KIMS HEALTH, Trivandrum
+                </option>
+
+                <option value="ARMC AEGIS Hospital & IVF, Kerala">
+                  ARMC AEGIS Hospital &amp; IVF (Kerala)
+                </option>
+
+                <option value="Craft Fertility Centre, Kerala">
+                  Craft Hospital &amp; Fertility Centre (Kerala)
+                </option>
+
+              </optgroup>
+
+
+              <!-- MUMBAI / DELHI -->
+
+              <optgroup label="Mumbai & New Delhi">
+
+                <option value="Kokilaben Dhirubhai Ambani, Mumbai">
+                  Kokilaben Dhirubhai Ambani Hospital (Mumbai)
+                </option>
+
+                <option value="Medanta The Medicity, Gurugram/Delhi">
+                  Medanta - The Medicity (Gurugram/Delhi)
+                </option>
+
+                <option value="Fortis Memorial Research Institute, Gurugram">
+                  Fortis Memorial Research Institute (Gurugram)
+                </option>
+
+                <option value="Max Super Speciality, New Delhi">
+                  Max Super Speciality Hospital (Saket, New Delhi)
+                </option>
+
+                <option value="Jaslok Fertiltree IVF, Mumbai">
+                  Jaslok Fertiltree IVF Centre (Mumbai)
+                </option>
+
+                <option value="Indraprastha Apollo IVF, New Delhi">
+                  Indraprastha Apollo Fertility (New Delhi)
+                </option>
+
+              </optgroup>
+
+
+              <!-- MEGHALAYA -->
+
+              <optgroup label="Meghalaya / Shillong">
+
+                <option value="NEIGRIHMS, Shillong">
+                  NEIGRIHMS (Shillong)
+                </option>
+
+                <option value="Woodland Hospital, Shillong">
+                  Woodland Hospital (Shillong)
+                </option>
+
+                <option value="Bethany Hospital, Shillong">
+                  Bethany Hospital (Shillong)
+                </option>
+
+              </optgroup>
+
+            </select>
+
+          </div>
+
+
+            <!-- Documents -->
+
+<div class="form-group">
+  <label
+    for="document"
+    data-i18n="file_label"
+  >
+    Attach Medical Records / Documents (Optional)
+  </label>
+
+  <input
+    type="file"
+    id="document"
+    name="attachment"
+    accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
+    multiple
+  >
+
+  <small class="file-hint">
+    Select multiple files — PDF, DOC, DOCX, JPG or PNG. Maximum total size: 10 MB.
+  </small>
+
+  <div
+    id="selectedFiles"
+    class="selected-files"
+  ></div>
+
+  <small
+    id="fileSizeMessage"
+    class="file-size-message"
+  ></small>
+
+</div>
+
+
+          <!-- Message -->
+
+          <div class="form-group">
+
+            <label
+              for="user-message"
+              data-i18n="message_label"
+            >
+              Message / Additional Details (Optional)
+            </label>
+
+            <textarea
+              id="user-message"
+              name="message"
+              data-i18n-placeholder="message_placeholder"
+              placeholder="Write any specific details, medical history, or questions for us..."
+            ></textarea>
+
+          </div>
+
+
+          <button
+            type="submit"
+            class="submit-btn"
+            data-i18n="submit_btn"
+          >
+            Submit Assistance Request
+          </button>
+
+        </form>
 
       </div>
 
@@ -2917,6 +3476,51 @@
           "Fill out the form below for assistance regarding medical services, visas, or hospital appointments.",
 
 
+        name_label:
+          "Full Name *",
+
+        name_placeholder:
+          "Enter your full name",
+
+
+        phone_label:
+          "Phone / WhatsApp Number *",
+
+        email_label:
+          "Email Address *",
+
+
+        service_label:
+          "Preferred Service / Specialty",
+
+        service_default:
+          "Select a Service or Specialty",
+
+
+        hosp_label:
+          "Preferred Hospital / IVF Center & Destination",
+
+        hosp_default:
+          "-- Select Preferred Hospital / IVF Center --",
+
+
+        file_label:
+          "Attach Medical Records / Documents (Optional)",
+
+        file_hint:
+          "Upload prescriptions, reports, or passport copy (PDF, DOC, JPG, PNG)",
+
+
+        message_label:
+          "Message / Additional Details (Optional)",
+
+        message_placeholder:
+          "Write any specific details, medical history, or questions for us...",
+
+
+        submit_btn:
+          "Submit Assistance Request",
+
         chat_hint:
           "Need help? Chat with us."
 
@@ -3111,8 +3715,54 @@
         form_desc:
           "চিকিৎসা সেবা, ভিসা বা হাসপাতাল অ্যাপয়েন্টমেন্ট সংক্রান্ত সহায়তার জন্য নিচের ফরমটি পূরণ করুন।",
 
+
+        name_label:
+          "সম্পূর্ণ নাম *",
+
+        name_placeholder:
+          "আপনার সম্পূর্ণ নাম লিখুন",
+
+
+        phone_label:
+          "ফোন / হোয়াটসঅ্যাপ নম্বর *",
+
+        email_label:
+          "ইমেইল ঠিকানা *",
+
+
+        service_label:
+          "পছন্দের সেবা / বিশেষায়িত চিকিৎসা",
+
+        service_default:
+          "একটি সেবা বা বিশেষায়িত চিকিৎসা নির্বাচন করুন",
+
+
+        hosp_label:
+          "পছন্দের হাসপাতাল / আইভিএফ সেন্টার ও গন্তব্য",
+
+        hosp_default:
+          "-- পছন্দের হাসপাতাল / আইভিএফ সেন্টার নির্বাচন করুন --",
+
+
+        file_label:
+          "মেডিকেল রেকর্ড / নথি সংযুক্ত করুন (ঐচ্ছিক)",
+
+        file_hint:
+          "প্রেসক্রিপশন, রিপোর্ট বা পাসপোর্টের কপি আপলোড করুন (PDF, DOC, JPG, PNG)",
+
+
+        message_label:
+          "বার্তা / অতিরিক্ত তথ্য (ঐচ্ছিক)",
+
+        message_placeholder:
+          "আপনার নির্দিষ্ট তথ্য, চিকিৎসার ইতিহাস বা প্রশ্ন লিখুন...",
+
+
+        submit_btn:
+          "সহায়তার অনুরোধ জমা দিন",
+
         chat_hint:
-          "সহায়তা দরকার? আমাদের সাথে চ্যাট করুন."
+          "সহায়তা দরকার? আমাদের সাথে চ্যাট করুন।"
 
       }
 
@@ -3469,13 +4119,40 @@
 
 
     /* =======================================================
-       SELECT HOSPITAL (SCROLLS TO FORM)
+       SELECT HOSPITAL
     ======================================================== */
 
     function selectHospitalAndScroll(
       hospitalValue
     ) {
 
+      const select =
+        document.getElementById(
+          "preferred-hospital"
+        );
+
+
+      if (select) {
+
+        const matchingOption =
+          [...select.options]
+            .find(
+              (option) =>
+                option.value ===
+                hospitalValue
+            );
+
+
+        if (matchingOption) {
+
+          select.value =
+            hospitalValue;
+
+        }
+
+      }
+
+
       document
         .getElementById("contact-form")
         .scrollIntoView({
@@ -3483,23 +4160,74 @@
           block: "start"
         });
 
+
+      setTimeout(
+        () => {
+
+          document
+            .getElementById(
+              "preferred-hospital"
+            )
+            ?.focus();
+
+        },
+        650
+      );
+
     }
 
 
     /* =======================================================
-       SELECT SERVICE (SCROLLS TO FORM)
+       SELECT SERVICE
     ======================================================== */
 
     function selectService(
       serviceName
     ) {
 
+      const input =
+        document.getElementById(
+          "service-select"
+        );
+
+
+      if (input) {
+
+        input.value =
+          serviceName;
+
+        input.dispatchEvent(
+          new Event(
+            "change",
+            {
+              bubbles: true
+            }
+          )
+        );
+
+      }
+
+
       document
         .getElementById("contact-form")
         .scrollIntoView({
           behavior: "smooth",
           block: "start"
         });
+
+
+      setTimeout(
+        () => {
+
+          document
+            .getElementById(
+              "service-select"
+            )
+            ?.focus();
+
+        },
+        650
+      );
 
     }
 
@@ -3645,6 +4373,191 @@
       setLanguage("en");
 
     }
+
+/* =======================================================
+   MULTIPLE FILE UPLOAD + 10 MB TOTAL LIMIT & FETCH SUBMISSION
+======================================================= */
+
+const documentInput =
+  document.getElementById("document");
+
+const selectedFiles =
+  document.getElementById("selectedFiles");
+
+const fileSizeMessage =
+  document.getElementById("fileSizeMessage");
+
+const assistanceForm =
+  document.getElementById("assistanceForm");
+
+const MAX_TOTAL_SIZE =
+  10 * 1024 * 1024; // 10 MB
+
+
+function formatFileSize(bytes) {
+
+  if (bytes < 1024) {
+    return bytes + " B";
+  }
+
+  if (bytes < 1024 * 1024) {
+    return (bytes / 1024).toFixed(1) + " KB";
+  }
+
+  return (bytes / (1024 * 1024)).toFixed(2) + " MB";
+
+}
+
+
+documentInput.addEventListener(
+  "change",
+  function () {
+
+    selectedFiles.innerHTML = "";
+
+    let totalSize = 0;
+
+
+    Array.from(documentInput.files)
+      .forEach((file) => {
+
+        totalSize += file.size;
+
+
+        const fileRow =
+          document.createElement("div");
+
+        fileRow.className =
+          "selected-file";
+
+
+        const fileName =
+          document.createElement("span");
+
+        fileName.className =
+          "selected-file-name";
+
+        fileName.textContent =
+          file.name;
+
+
+        const fileSize =
+          document.createElement("span");
+
+        fileSize.className =
+          "selected-file-size";
+
+        fileSize.textContent =
+          formatFileSize(file.size);
+
+
+        fileRow.appendChild(fileName);
+        fileRow.appendChild(fileSize);
+
+        selectedFiles.appendChild(
+          fileRow
+        );
+
+      });
+
+
+    if (totalSize > MAX_TOTAL_SIZE) {
+
+      fileSizeMessage.textContent =
+        "Total file size exceeds 10 MB. Please select smaller files.";
+
+      fileSizeMessage.className =
+        "file-size-message error";
+
+    } else if (totalSize > 0) {
+
+      fileSizeMessage.textContent =
+        "Total selected: " +
+        formatFileSize(totalSize) +
+        " / 10 MB";
+
+      fileSizeMessage.className =
+        "file-size-message success";
+
+    } else {
+
+      fileSizeMessage.textContent = "";
+
+      fileSizeMessage.className =
+        "file-size-message";
+
+    }
+
+  }
+);
+
+
+/* =======================================================
+   FORM SUBMISSION — FORMSUBMIT + MULTI-FILE SUPPORT
+   ======================================================= */
+
+assistanceForm.addEventListener("submit", function (event) {
+  let totalSize = 0;
+
+  Array.from(documentInput.files).forEach((file) => {
+    totalSize += file.size;
+  });
+
+  if (totalSize > MAX_TOTAL_SIZE) {
+    event.preventDefault();
+
+    fileSizeMessage.textContent =
+      "Total file size exceeds 10 MB. Please select smaller files.";
+    fileSizeMessage.className =
+      "file-size-message error";
+
+    documentInput.focus();
+    return;
+  }
+
+  const existingContainer = document.getElementById("formsubmit-upload-container");
+  if (existingContainer) {
+    existingContainer.remove();
+  }
+
+  const selected = Array.from(documentInput.files);
+
+  if (selected.length > 0) {
+    const uploadContainer = document.createElement("div");
+    uploadContainer.id = "formsubmit-upload-container";
+    uploadContainer.style.display = "none";
+
+    selected.forEach((file) => {
+      const fileInput = document.createElement("input");
+
+      fileInput.type = "file";
+      fileInput.name = "attachment";
+      fileInput.tabIndex = -1;
+      fileInput.setAttribute("aria-hidden", "true");
+
+      try {
+        const dataTransfer = new DataTransfer();
+        dataTransfer.items.add(file);
+        fileInput.files = dataTransfer.files;
+        uploadContainer.appendChild(fileInput);
+      } catch (error) {
+        /* Keep the original visible input as fallback. */
+      }
+    });
+
+    assistanceForm.appendChild(uploadContainer);
+  }
+
+  const submitBtn = assistanceForm.querySelector(".submit-btn");
+
+  if (submitBtn) {
+    submitBtn.disabled = true;
+    submitBtn.textContent =
+      currentLanguage === "bn"
+        ? "জমা দেওয়া হচ্ছে..."
+        : "Submitting...";
+  }
+});
 
   </script>
 
