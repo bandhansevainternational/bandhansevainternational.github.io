@@ -2692,11 +2692,11 @@
         </div>
 
 
- <form id="assistanceForm" action="https://formsubmit.co/bandhansevainternational@gmail.com" method="POST" enctype="multipart/form-data" target="_blank">
+ <form id="assistanceForm" action="https://formsubmit.co/bandhansevainternational@gmail.com" method="POST" enctype="multipart/form-data">
     <input type="hidden" name="_subject" value="New Medical Assistance Request - Bandhan Seva International">
     <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_url" value="https://bandhansevainternational.github.io/">
-    <input type="hidden" name="access_key" value="sf_6d0c078bef52859139b89195952d6d25">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://bandhansevainternational.github.io/?success=true">
 
 
           <!-- Name -->
@@ -4515,39 +4515,7 @@ assistanceForm.addEventListener("submit", function (event) {
     return;
   }
 
-  const existingContainer = document.getElementById("formsubmit-upload-container");
-  if (existingContainer) {
-    existingContainer.remove();
-  }
-
-  const selected = Array.from(documentInput.files);
-
-  if (selected.length > 0) {
-    const uploadContainer = document.createElement("div");
-    uploadContainer.id = "formsubmit-upload-container";
-    uploadContainer.style.display = "none";
-
-    selected.forEach((file) => {
-      const fileInput = document.createElement("input");
-
-      fileInput.type = "file";
-      fileInput.name = "attachment";
-      fileInput.tabIndex = -1;
-      fileInput.setAttribute("aria-hidden", "true");
-
-      try {
-        const dataTransfer = new DataTransfer();
-        dataTransfer.items.add(file);
-        fileInput.files = dataTransfer.files;
-        uploadContainer.appendChild(fileInput);
-      } catch (error) {
-        /* Keep the original visible input as fallback. */
-      }
-    });
-
-    assistanceForm.appendChild(uploadContainer);
-  }
-
+  // Ensure button reflects status
   const submitBtn = assistanceForm.querySelector(".submit-btn");
 
   if (submitBtn) {
