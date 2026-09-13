@@ -1824,6 +1824,38 @@
     .dest-card.active-partner { border-color: #9fd6b8; }
     .btn-primary:disabled { opacity: 0.55; cursor: not-allowed; transform: none; }
 
+    /* Destination hospital dropdown */
+    .destination-hospital-select {
+      width: 100%;
+      padding: 14px 45px 14px 16px;
+      border: 1px solid var(--primary);
+      border-radius: 11px;
+      background-color: var(--primary);
+      color: #fff;
+      font-weight: 700;
+      cursor: pointer;
+      outline: none;
+      appearance: none;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath fill='%23ffffff' d='M5.5 7.5 10 12l4.5-4.5 1.5 1.5-6 6-6-6z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      transition: 0.25s ease;
+    }
+
+    .destination-hospital-select:hover,
+    .destination-hospital-select:focus {
+      background-color: var(--primary-dark);
+      border-color: var(--primary-dark);
+      box-shadow: 0 0 0 4px rgba(18, 114, 154, 0.10);
+    }
+
+    .destination-hospital-select option {
+      background: #fff;
+      color: var(--text);
+      font-weight: 600;
+    }
+
     /* =========================================================
        REDUCED MOTION
     ========================================================= */
@@ -2165,7 +2197,16 @@
       <div class="destinations-grid">
         <article class="dest-card active-partner reveal">
           <div class="card-image-wrap"><img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?q=85&w=1000&auto=format&fit=crop" alt="Kerala backwaters" loading="lazy"></div>
-          <div class="dest-body"><span class="dest-badge active" data-i18n="kerala_badge">Active Partnership</span><h3 data-i18n="kerala_title">Kerala</h3><p data-i18n="kerala_desc">KIMS Health, Trivandrum &amp; VPS Lakeshore Hospital, Kochi — advanced medical treatment, top fertility clinics, and wellness recovery options.</p><button type="button" class="btn-primary" onclick="openHospitalModal('Kerala')" data-i18n="select_hosp_btn">Select Hospital / IVF Center</button></div>
+          <div class="dest-body"><span class="dest-badge active" data-i18n="kerala_badge">Active Partnership</span><h3 data-i18n="kerala_title">Kerala</h3><p data-i18n="kerala_desc">KIMS Health, Trivandrum &amp; VPS Lakeshore Hospital, Kochi — advanced medical treatment, top fertility clinics, and wellness recovery options.</p><select
+            id="kerala-hospital-select"
+            class="destination-hospital-select"
+            aria-label="Select Kerala hospital / IVF center"
+            onchange="selectHospitalAndScroll(this.value)"
+          >
+            <option value="" data-i18n="select_hosp_btn">Select Hospital / IVF Center</option>
+            <option value="KIMS Health, Trivandrum" data-i18n="hospital_kims">KIMS Health, Trivandrum</option>
+            <option value="VPS Lakeshore Hospital, Kochi" data-i18n="hospital_vps">VPS Lakeshore Hospital, Kochi</option>
+          </select></div>
         </article>
         <article class="dest-card reveal reveal-delay-1"><div class="card-image-wrap"><img src="https://images.unsplash.com/photo-1558431382-27e303142255?auto=format&fit=crop&w=1000&q=85" alt="Kolkata landmark" loading="lazy"></div><div class="dest-body"><span class="dest-badge soon" data-i18n="kolkata_badge">Coming Soon</span><h3 data-i18n="kolkata_title">Kolkata</h3><p data-i18n="kolkata_desc">Fast-track consultations, cardiology, IVF, and direct regional connectivity.</p><button type="button" class="btn-primary" disabled data-i18n="coming_soon_btn">Coming Soon</button></div></article>
         <article class="dest-card reveal"><div class="card-image-wrap"><img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?q=85&w=1000&auto=format&fit=crop" alt="Chennai landmark" loading="lazy"></div><div class="dest-body"><span class="dest-badge soon" data-i18n="chennai_badge">Coming Soon</span><h3 data-i18n="chennai_title">Chennai</h3><p data-i18n="chennai_desc">World-class organ transplant centers, fertility care, and complex surgical care.</p><button type="button" class="btn-primary" disabled data-i18n="coming_soon_btn">Coming Soon</button></div></article>
@@ -3000,6 +3041,12 @@
 
         select_hosp_btn:
           "Select Hospital / IVF Center",
+
+        hospital_kims:
+          "KIMS Health, Trivandrum",
+
+        hospital_vps:
+          "VPS Lakeshore Hospital, Kochi",
         nav_about: "About",
         hero_free: "✅ Free: Hospital selection & doctor appointments",
         hero_paid: "💰 Paid: Visa, travel, lodging & tourism support",
@@ -3266,6 +3313,12 @@
 
         select_hosp_btn:
           "হাসপাতাল / আইভিএফ সেন্টার নির্বাচন করুন",
+
+        hospital_kims:
+          "KIMS Health, Trivandrum",
+
+        hospital_vps:
+          "VPS Lakeshore Hospital, Kochi",
         nav_about: "আমাদের সম্পর্কে",
         hero_free: "✅ বিনামূল্যে: হাসপাতাল নির্বাচন ও ডাক্তার অ্যাপয়েন্টমেন্ট",
         hero_paid: "💰 পরিশোধযোগ্য: ভিসা, ভ্রমণ, আবাসন ও ট্যুরিজম সহায়তা",
