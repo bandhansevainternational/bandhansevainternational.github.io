@@ -912,6 +912,26 @@
       background: #b9d7e2;
     }
 
+    /* Subtle moving line echoing the Bangladesh → Travel → India Care visual */
+    .journey-steps::after {
+      content: "";
+      position: absolute;
+      top: 27px;
+      left: 10%;
+      width: 12%;
+      height: 2px;
+      background: var(--primary-light);
+      border-radius: 999px;
+      animation: journeyStepLine 2.8s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    @keyframes journeyStepLine {
+      0% { left: 10%; opacity: 0.35; }
+      50% { opacity: 1; }
+      100% { left: 78%; opacity: 0.35; }
+    }
+
     .step {
       text-align: center;
 
@@ -1703,6 +1723,20 @@
         width: 2px;
 
         height: auto;
+      }
+
+      .journey-steps::after {
+        left: 27px;
+        top: 28px;
+        width: 2px;
+        height: 18%;
+        animation-name: journeyStepLineMobile;
+      }
+
+      @keyframes journeyStepLineMobile {
+        0% { top: 28px; opacity: 0.35; }
+        50% { opacity: 1; }
+        100% { top: 70%; opacity: 0.35; }
       }
 
       .step {
