@@ -1819,10 +1819,17 @@
     .hero-pricing p { margin: 4px 0; }
     .hero-pricing .free-line { color: var(--green); }
     .hero-pricing .paid-line { color: var(--primary); }
-    .dest-badge.active { background: #dcfce7; color: #15803d; }
-    .dest-badge.soon { background: #fef3c7; color: #b45309; }
+    .dest-badge.active { background: #E8F5F0; color: #087A5A; border: 1px solid #B7E3D2; }
+    .dest-badge.soon { background: #F1F5F7; color: #64748B; border: 1px solid #D9E2E7; }
     .dest-card.active-partner { border-color: #9fd6b8; }
     .btn-primary:disabled { opacity: 0.55; cursor: not-allowed; transform: none; }
+
+    .reassurance-section { padding-top: 0; }
+    .reassurance-container { max-width: 760px; margin: auto; padding: 24px 28px; background: var(--surface-soft); border: 1px solid var(--border); border-radius: 18px; text-align: center; }
+    .reassurance-container h2 { color: var(--primary); font-size: 1.15rem; line-height: 1.3; margin-bottom: 14px; font-weight: 800; }
+    .reassurance-list { list-style: none; display: grid; gap: 8px; margin: 0; }
+    .reassurance-list li { color: var(--muted); font-size: 0.9rem; }
+    .reassurance-list li::before { content: "✓"; color: var(--green); font-weight: 800; margin-right: 8px; }
 
     /* Destination hospital dropdown */
     .destination-hospital-select {
@@ -2160,19 +2167,15 @@
     </section>
 
 
-  <h2 data-i18n="about_title">About Bandhan Seva International</h2>
-<p class="about-lead" data-i18n="about_lead">Bandhan Seva International was created with a simple purpose — to make healthcare travel from Bangladesh to India easier, more organized, and more reliable.</p>
-<p data-i18n="about_story_1">For patients and families, seeking treatment in another country can be overwhelming. Finding the right hospital, connecting with specialists, arranging appointments, visas, travel, accommodation, and local support can involve many separate steps.</p>
-<p data-i18n="about_story_2">BSI brings these services together through one trusted point of support, helping patients and their families navigate their healthcare journey with greater confidence and care.</p>
-<div class="about-grid">
-    <div class="about-person"><h3 data-i18n="about_adhil_title">Founders Of BSI – Adhil &amp; Rita</h3></div>
-</div>
-<ul class="about-list">
-    <li data-i18n="about_point_1">We understand both sides — the patient's perspective and the hospital environment.</li>
-    <li data-i18n="about_point_2">Hospital selection and doctor appointments coordination.</li>
-    <li data-i18n="about_point_3">We are based in Dhaka — you can meet us face-to-face before you travel.</li>
-    <li data-i18n="about_point_4">We have direct partnerships with leading hospitals like KIMS Health, Trivandrum and VPS Lakeshore Hospital, Kochi.</li>
-</ul>
+    <section id="about" class="section about-section">
+      <div class="about-container reveal">
+        <h2 data-i18n="about_title">About Bandhan Seva International</h2>
+        <p class="about-founders">Founders Of BSI - Adhil &amp; Rita</p>
+        <p class="about-lead" data-i18n="about_lead">Bandhan Seva International was created with a simple purpose — to make healthcare travel from Bangladesh to India easier, more organized, and more reliable.</p>
+        <p data-i18n="about_story_1">For patients and families, seeking treatment in another country can be overwhelming. Finding the right hospital, connecting with specialists, arranging appointments, visas, travel, accommodation, and local support can involve many separate steps.</p>
+        <p data-i18n="about_story_2">BSI brings these services together through one trusted point of support, helping patients and their families navigate their healthcare journey with greater confidence and care.</p>
+      </div>
+    </section>
 
 
     <!-- =====================================================
@@ -2187,7 +2190,7 @@
       <div class="destinations-grid">
         <article class="dest-card active-partner reveal">
           <div class="card-image-wrap"><img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?q=85&w=1000&auto=format&fit=crop" alt="Kerala backwaters" loading="lazy"></div>
-          <div class="dest-body"><span class="dest-badge soon" data-i18n="kerala_badge">Available Now</span><h3 data-i18n="kerala_title">Kerala</h3><p data-i18n="kerala_desc">KIMS Health, Trivandrum &amp; VPS Lakeshore Hospital, Kochi — advanced medical treatment, top fertility clinics, and wellness recovery options.</p><select
+          <div class="dest-body"><span class="dest-badge active" data-i18n="kerala_badge">Available Now</span><h3 data-i18n="kerala_title">Kerala</h3><p data-i18n="kerala_desc">KIMS Health, Trivandrum &amp; VPS Lakeshore Hospital, Kochi — advanced medical treatment, top fertility clinics, and wellness recovery options.</p><select
             id="kerala-hospital-select"
             class="destination-hospital-select"
             aria-label="Select Kerala hospital / IVF center"
@@ -2198,11 +2201,11 @@
             <option value="VPS Lakeshore Hospital, Kochi" data-i18n="hospital_vps">VPS Lakeshore Hospital, Kochi</option>
           </select></div>
         </article>
-        <article class="dest-card reveal reveal-delay-1"><div class="card-image-wrap"><img src="https://images.unsplash.com/photo-1558431382-27e303142255?auto=format&fit=crop&w=1000&q=85" alt="Kolkata landmark" loading="lazy"></div><div class="dest-body"><span class="dest-badge active" data-i18n="kolkata_badge">Coming Soon</span><h3 data-i18n="kolkata_title">Kolkata</h3><p data-i18n="kolkata_desc">Fast-track consultations, cardiology, IVF, and direct regional connectivity.</p><button type="button" class="btn-primary" disabled data-i18n="coming_soon_btn">Coming Soon</button></div></article>
-        <article class="dest-card reveal"><div class="card-image-wrap"><img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?q=85&w=1000&auto=format&fit=crop" alt="Chennai landmark" loading="lazy"></div><div class="dest-body"><span class="dest-badge active" data-i18n="chennai_badge">Coming Soon</span><h3 data-i18n="chennai_title">Chennai</h3><p data-i18n="chennai_desc">World-class organ transplant centers, fertility care, and complex surgical care.</p><button type="button" class="btn-primary" disabled data-i18n="coming_soon_btn">Coming Soon</button></div></article>
-        <article class="dest-card reveal reveal-delay-1"><div class="card-image-wrap"><img src="https://images.unsplash.com/photo-1596176530529-78163a4f7af2?q=85&w=1000&fit=crop" alt="Bengaluru city" loading="lazy"></div><div class="dest-body"><span class="dest-badge active" data-i18n="bengaluru_badge">Coming Soon</span><h3 data-i18n="bengaluru_title">Bengaluru</h3><p data-i18n="bengaluru_desc">Leading tech-driven oncology, neurology, IVF centers, and advanced diagnostics.</p><button type="button" class="btn-primary" disabled data-i18n="coming_soon_btn">Coming Soon</button></div></article>
-        <article class="dest-card reveal"><div class="card-image-wrap"><img src="https://images.unsplash.com/photo-1567157577867-05ccb1388e66?q=85&w=1000&auto=format&fit=crop" alt="Mumbai seafront" loading="lazy"></div><div class="dest-body"><span class="dest-badge active" data-i18n="mumbai_badge">Coming Soon</span><h3 data-i18n="mumbai_title">Mumbai &amp; New Delhi</h3><p data-i18n="mumbai_desc">Premier medical institutes, globally recognized IVF centers, and complex treatments.</p><button type="button" class="btn-primary" disabled data-i18n="coming_soon_btn">Coming Soon</button></div></article>
-        <article class="dest-card reveal reveal-delay-1"><div class="card-image-wrap"><img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=85&w=1000&auto=format&fit=crop" alt="Meghalaya mountains" loading="lazy"></div><div class="dest-body"><span class="dest-badge active" data-i18n="meghalaya_badge">Coming Soon</span><h3 data-i18n="meghalaya_title">Meghalaya / Shillong</h3><p data-i18n="meghalaya_desc">Quality regional healthcare, specialized patient support, and a serene environment.</p><button type="button" class="btn-primary" disabled data-i18n="coming_soon_btn">Coming Soon</button></div></article>
+        <article class="dest-card reveal reveal-delay-1"><div class="card-image-wrap"><img src="https://images.unsplash.com/photo-1558431382-27e303142255?auto=format&fit=crop&w=1000&q=85" alt="Kolkata landmark" loading="lazy"></div><div class="dest-body"><span class="dest-badge soon" data-i18n="kolkata_badge">Coming Soon</span><h3 data-i18n="kolkata_title">Kolkata</h3><p data-i18n="kolkata_desc">Fast-track consultations, cardiology, IVF, and direct regional connectivity.</p><button type="button" class="btn-primary" disabled data-i18n="coming_soon_btn">Coming Soon</button></div></article>
+        <article class="dest-card reveal"><div class="card-image-wrap"><img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?q=85&w=1000&auto=format&fit=crop" alt="Chennai landmark" loading="lazy"></div><div class="dest-body"><span class="dest-badge soon" data-i18n="chennai_badge">Coming Soon</span><h3 data-i18n="chennai_title">Chennai</h3><p data-i18n="chennai_desc">World-class organ transplant centers, fertility care, and complex surgical care.</p><button type="button" class="btn-primary" disabled data-i18n="coming_soon_btn">Coming Soon</button></div></article>
+        <article class="dest-card reveal reveal-delay-1"><div class="card-image-wrap"><img src="https://images.unsplash.com/photo-1596176530529-78163a4f7af2?q=85&w=1000&fit=crop" alt="Bengaluru city" loading="lazy"></div><div class="dest-body"><span class="dest-badge soon" data-i18n="bengaluru_badge">Coming Soon</span><h3 data-i18n="bengaluru_title">Bengaluru</h3><p data-i18n="bengaluru_desc">Leading tech-driven oncology, neurology, IVF centers, and advanced diagnostics.</p><button type="button" class="btn-primary" disabled data-i18n="coming_soon_btn">Coming Soon</button></div></article>
+        <article class="dest-card reveal"><div class="card-image-wrap"><img src="https://images.unsplash.com/photo-1567157577867-05ccb1388e66?q=85&w=1000&auto=format&fit=crop" alt="Mumbai seafront" loading="lazy"></div><div class="dest-body"><span class="dest-badge soon" data-i18n="mumbai_badge">Coming Soon</span><h3 data-i18n="mumbai_title">Mumbai &amp; New Delhi</h3><p data-i18n="mumbai_desc">Premier medical institutes, globally recognized IVF centers, and complex treatments.</p><button type="button" class="btn-primary" disabled data-i18n="coming_soon_btn">Coming Soon</button></div></article>
+        <article class="dest-card reveal reveal-delay-1"><div class="card-image-wrap"><img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=85&w=1000&auto=format&fit=crop" alt="Meghalaya mountains" loading="lazy"></div><div class="dest-body"><span class="dest-badge soon" data-i18n="meghalaya_badge">Coming Soon</span><h3 data-i18n="meghalaya_title">Meghalaya / Shillong</h3><p data-i18n="meghalaya_desc">Quality regional healthcare, specialized patient support, and a serene environment.</p><button type="button" class="btn-primary" disabled data-i18n="coming_soon_btn">Coming Soon</button></div></article>
       </div>
     </section>
 
@@ -2692,7 +2695,7 @@
   >
 
   <small class="file-hint">
-    Select one file — PDF, DOC, DOCX, JPG, JPEG or PNG. Maximum file size: 10 MB.
+    Upload one supporting document or image. Supported formats: PDF, DOC, DOCX, JPG/JPEG, PNG. Maximum file size: 10 MB.
   </small>
 
   <div
@@ -2741,6 +2744,22 @@
 
       </div>
 
+    </section>
+
+
+    <!-- =====================================================
+         AFTER SUBMISSION REASSURANCE
+    ====================================================== -->
+
+    <section class="section reassurance-section" aria-labelledby="after-submit-title">
+      <div class="reassurance-container reveal">
+        <h2 id="after-submit-title" data-i18n="after_submit_title">What happens after you submit?</h2>
+        <ul class="reassurance-list">
+          <li data-i18n="after_submit_1">We reply within 2 hours on WhatsApp</li>
+          <li data-i18n="after_submit_2">A customer representative from our team will get in touch with you</li>
+          <li data-i18n="after_submit_3">No payment required to start</li>
+        </ul>
+      </div>
     </section>
 
   </main>
@@ -2824,7 +2843,7 @@
       Dhaka, Bangladesh |
       Phone:
       <a href="tel:+8801608191660">
-        +880 1608-191660
+        +880 1608 191660
       </a>
     </p>
 
@@ -3041,19 +3060,14 @@
         hero_free: "✅ Free: Hospital selection & doctor appointments",
         hero_paid: "💰 Paid: Visa, travel, lodging & tourism support",
         coming_soon_btn: "Coming Soon",
-        "about_title": "About Bandhan Seva International",
-        "about_lead": "Bandhan Seva International was created with a simple purpose — to make healthcare travel from Bangladesh to India easier, more organized, and more reliable.",
-        "about_story_1": "For patients and families, seeking treatment in another country can be overwhelming. Finding the right hospital, connecting with specialists, arranging appointments, visas, travel, accommodation, and local support can involve many separate steps.",
-        "about_story_2": "BSI brings these services together through one trusted point of support, helping patients and their families navigate their healthcare journey with greater confidence and care.",
-        "about_adhil_title": "Founders Of BSI – Adhil &amp; Rita",
-        "about_adhil_desc": "Adhil — India",
-        "about_rita_title": "Rita — Bangladesh",
-        "about_rita_desc": "Bridging healthcare travel between Bangladesh and India with dedication and trust.",
-        "about_point_1": "We understand both sides — the patient's perspective and the hospital environment.",
-        "about_point_2": "Hospital selection and doctor appointments coordination.",
-        "about_point_3": "We are based in Dhaka — you can meet us face-to-face before you travel.",
-        "about_point_4": "We have direct partnerships with leading hospitals like KIMS Health, Trivandrum and VPS Lakeshore Hospital, Kochi.",
-        "about_promise": "Bandhan Seva International was created with a simple purpose — to make healthcare travel from Bangladesh to India easier, more organized, and more reliable.",
+        about_title: "About Bandhan Seva International",
+        about_lead: "Bandhan Seva International was created with a simple purpose — to make healthcare travel from Bangladesh to India easier, more organized, and more reliable.",
+        about_story_1: "For patients and families, seeking treatment in another country can be overwhelming. Finding the right hospital, connecting with specialists, arranging appointments, visas, travel, accommodation, and local support can involve many separate steps.",
+        about_story_2: "BSI brings these services together through one trusted point of support, helping patients and their families navigate their healthcare journey with greater confidence and care.",
+        after_submit_title: "What happens after you submit?",
+        after_submit_1: "We reply within 2 hours on WhatsApp",
+        after_submit_2: "A customer representative from our team will get in touch with you",
+        after_submit_3: "No payment required to start",
         kerala_badge: "Available Now",
         kolkata_badge: "Coming Soon",
         chennai_badge: "Coming Soon",
@@ -3178,7 +3192,7 @@
           "Attach Medical Records / Documents (Optional)",
 
         file_hint:
-          "Upload one prescription, report, passport copy, or other document (PDF, DOC, DOCX, JPG, JPEG or PNG). Maximum file size: 10 MB.",
+          "Upload one supporting document or image. Supported formats: PDF, DOC, DOCX, JPG/JPEG, PNG. Maximum file size: 10 MB.",
 
 
         message_label:
@@ -3311,18 +3325,13 @@
         hero_paid: "💰 পরিশোধযোগ্য: ভিসা, ভ্রমণ, আবাসন ও ট্যুরিজম সহায়তা",
         coming_soon_btn: "শীঘ্রই আসছে",
         about_title: "বন্ধন সেবা ইন্টারন্যাশনাল সম্পর্কে",
-        "about_lead": "বাংলাদেশ থেকে ভারতে চিকিৎসা ভ্রমণকে আরও সহজ, আরও সুশৃঙ্খল এবং আরও নির্ভরযোগ্য করে তোলার জন্য ব্যান্ডহন সেবা ইন্টারন্যাশনাল তৈরি করা হয়েছে।",
-        "about_story_1": "রোগী এবং তাদের পরিবারের জন্য অন্য দেশে চিকিৎসা নেওয়া অত্যন্ত জটিল হতে পারে। সঠিক হাসপাতাল খুঁজে বের করা, বিশেষজ্ঞ চিকিৎসকদের সাথে যোগাযোগ করা, অ্যাপয়েন্টমেন্ট, ভিসা, যাতায়াত, আবাসন এবং স্থানীয় সহায়তা নিশ্চিত করার মতো অনেকগুলো ধাপ এতে জড়িত থাকে।",
-        "about_story_2": "বিএসআই (BSI) এই সমস্ত সেবাগুলোকে একটি বিশ্বস্ত সহায়তার অধীনে একত্রিত করে, যা রোগী এবং তাদের পরিবারকে আরও আত্মবিশ্বাস ও যত্নের সাথে তাদের চিকিৎসা যাত্রা পরিচালনা করতে সাহায্য করে।",
-        "about_adhil_title": "বিএসআই-এর প্রতিষ্ঠাতা – আদিল ও রিতা",
-        "about_adhil_desc": "আদিল — ভারত",
-        "about_rita_title": "রিতা — বাংলাদেশ",
-        "about_rita_desc": "উৎসর্গ এবং বিশ্বাসের সাথে বাংলাদেশ এবং ভারতের মধ্যে চিকিৎসা ভ্রমণকে সংযুক্ত করা।",
-        "about_point_1": "আমরা উভয় পক্ষই বুঝতে পারি — রোগীর দৃষ্টিকোণ এবং হাসপাতালের পরিবেশ।",
-        "about_point_2": "হাসপাতাল নির্বাচন এবং ডাক্তার অ্যাপয়েন্টমেন্ট সমন্বয় করা হয়।",
-        "about_point_3": "আমরা ঢাকায় অবস্থান করি — যাত্রার আগে আপনি আমাদের সাথে সরাসরি দেখা করতে পারেন।",
-        "about_point_4": "আমাদের কেআইএমএস হেলথ, ত্রিবান্দ্রম এবং ভিপিএস লেকশোর হসপিটাল, কচির মতো শীর্ষস্থানীয় হাসপাতালগুলোর সাথে সরাসরি অংশীদারিত্ব রয়েছে।",
-        "about_promise": "ব্যান্ডহন সেবা ইন্টারন্যাশনাল একটি সহজ উদ্দেশ্য নিয়ে তৈরি করা হয়েছে — বাংলাদেশ থেকে ভারতে চিকিৎসা ভ্রমণকে আরও সহজ, আরও সুশৃঙ্খল এবং আরও নির্ভরযোগ্য করে তোলা।",
+        about_lead: "বন্ধন সেবা ইন্টারন্যাশনাল একটি সহজ উদ্দেশ্য নিয়ে তৈরি হয়েছে — বাংলাদেশ থেকে ভারতে চিকিৎসার জন্য ভ্রমণকে আরও সহজ, সুসংগঠিত এবং নির্ভরযোগ্য করা।",
+        about_story_1: "রোগী ও পরিবারের জন্য অন্য দেশে চিকিৎসা নিতে যাওয়া অনেক সময় কঠিন ও উদ্বেগের হতে পারে। সঠিক হাসপাতাল খোঁজা, বিশেষজ্ঞের সাথে যোগাযোগ, অ্যাপয়েন্টমেন্ট, ভিসা, ভ্রমণ, আবাসন এবং স্থানীয় সহায়তার মতো অনেকগুলো ধাপ আলাদাভাবে সামলাতে হয়।",
+        about_story_2: "BSI এই সেবাগুলোকে একটি বিশ্বস্ত সহায়তার মাধ্যমে একত্রিত করে, যাতে রোগী ও তাদের পরিবার আরও আত্মবিশ্বাস ও যত্নের সাথে তাদের স্বাস্থ্যসেবা যাত্রা পরিচালনা করতে পারেন।",
+        after_submit_title: "আপনি ফর্ম জমা দেওয়ার পর কী হবে?",
+        after_submit_1: "আমরা WhatsApp-এ ২ ঘণ্টার মধ্যে উত্তর দিই",
+        after_submit_2: "আমাদের টিমের একজন কাস্টমার প্রতিনিধি আপনার সাথে যোগাযোগ করবেন",
+        after_submit_3: "শুরু করতে কোনো পেমেন্টের প্রয়োজন নেই",
         kerala_badge: "এখন উপলব্ধ",
         kolkata_badge: "শীঘ্রই আসছে",
         chennai_badge: "শীঘ্রই আসছে",
@@ -3447,7 +3456,7 @@
           "মেডিকেল রেকর্ড / নথি সংযুক্ত করুন (ঐচ্ছিক)",
 
         file_hint:
-          "একটি প্রেসক্রিপশন, রিপোর্ট, পাসপোর্টের কপি বা অন্যান্য নথি আপলোড করুন (PDF, DOC, DOCX, JPG, JPEG বা PNG)। সর্বোচ্চ ফাইল সাইজ: ১০ MB।",
+          "একটি সহায়ক নথি বা ছবি আপলোড করুন। সমর্থিত ফরম্যাট: PDF, DOC, DOCX, JPG/JPEG, PNG। সর্বোচ্চ ফাইল সাইজ: ১০ MB।",
 
 
         message_label:
